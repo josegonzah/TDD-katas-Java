@@ -19,15 +19,15 @@ public class StringCalculatorTest {
     @Test
     public void twoNumbersCommaDelimitedReturnsTheSumTest() throws Exception {
         assertThat(stringCalculatorInstance.add("0,2"), is(2));
-        assertThat(stringCalculatorInstance.add("1,1"), is(2));
+        assertThat(stringCalculatorInstance.add("3,4"), is(7));
         assertThat(stringCalculatorInstance.add("1,2"), is(3));
     }
     // Two numbers, newline delimited, returns the sum
     @Test
     public void sameThatBeforeButNewLineDelimitedTest() throws Exception {
         assertThat(stringCalculatorInstance.add("0\n2"), is(2));
-        assertThat(stringCalculatorInstance.add("1\n1"), is(2));
-        assertThat(stringCalculatorInstance.add("1\n2"), is(3));
+        assertThat(stringCalculatorInstance.add("3\n4"), is(7));
+        assertThat(stringCalculatorInstance.add("6\n7"), is(13));
     }
 
     // Three numbers, delimited either way, returns the sum
